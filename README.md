@@ -27,13 +27,15 @@ For example: a player could be created with game.create_player("Sam")
 ## Viewing the board
 the function print_board() takes no parameters and returns the location of each of the seeds on the board, as well as the number of seeds in the store of each player
 
-![picture of the function print_board() in code](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-print-board.png)
+![picture of the function print_board() in code](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-print-board-function.png)
 
 ![picture of the function print_board() being executed](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-print-board.png)
 an example of print_board() midway through the game
 
 ## Finding the winner
 The function return_winner() takes no parameters, and checks to see if the game has finished. Uses an iterative conditional to find if one of the players has zero seeds in all of their cups, since this indicates the end of the game. If both players still have seeds in their cups, the function will return "Game has not ended". If the game has ended, the function compares the total of each player's store. It returns "Winner is player 1", "Winner is player 2" or "It's a tie" depending on the outcome.
+
+![picture of the return_winner() function](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-winner.png)
 
 ## Taking turns
 By far the most complex function of the program is play_game() which takes as input a 1 or 2 to indicate the player, and an index from 1-6 to indicate the cup to draw from. 
