@@ -4,33 +4,32 @@ This program allows the user to play a text-based version of Mancala using a Pyt
 
 The list before gameplay looks like this, with 4 seeds in each cup and 0 in each store:
 
-mancala-board-list PHOTO
+![a picture of the 14 integer list at the start of the game](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-board-list.png)
 
 It can be visualized on a mancala board like this:
 
-mancala-board-visual PHOTO
+![a picture of a regular mancala board](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-board-visual.jpg)
 
 ## Initializing the class
 The Mancala class item is initialized without any input. This item allows the user to call functions for normal gameplay.
 
-mancala-class PHOTO
+![picture of the code that makes the mancala class](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-class.png)
 
 For example: a class item could be created with game = Mancala()
 
 ## Creating players
 The function create_player assigns names to Player 1 and Player 2. 
 
-mancala-create-player PHOTO
+![example of implementing the create_player() function](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-create-player.png)
 
 For example: a player could be created with game.create_player("Sam")
 
 ## Viewing the board
 the function print_board() takes no parameters and returns the location of each of the seeds on the board, as well as the number of seeds in the store of each player
 
-mancala-print-board-function PHOTO
+![picture of the function print_board() in code](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-print-board.png)
 
-mancala-print-board PHOTO
-
+![picture of the function print_board() being executed](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-print-board.png)
 an example of print_board() midway through the game
 
 ## Finding the winner
@@ -42,14 +41,14 @@ By far the most complex function of the program is play_game() which takes as in
 #### Has the game ended?
 Before making a move, the function checks to see if the index is out of range and also calls return_winner() to check if the game has ended.
 
-mancala-play-game-1 PHOTO
+![first picture of the play_game() function](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-play-game-1.png)
 
 #### Executing the turn
 The index is decremented or increased to match the index values of the respective player's cups (Player 1: index -= 1, Player 2: Index += 6). The seed count is gathered from that cup, and with an iterative process a seed is placed in each subsequent cup and store, unless it is the other player's store, in which case that index is skipped. There is a conditional process to check if the last seed results in a <a href="https://mancala.fandom.com/wiki/Capturing_(game_mechanism)">seed steal</a>. There is also a conditional process to check if the last seed lands in the player's store, which results in another turn.
 
-mancala-player-turn PHOTO
+![picture of the code for moving seeds to different cups](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/mancala-player-turn.png)
 
 #### Checking for empty cups
 After the player has taken their turn, there is a check to see if either of the players now has 0 seeds in all of their cups. If for example, Player 1 has 0 seeds in all their cups, then Player 2 immediately puts all of their seeds into their own store. The program will recognize the game has ended the next time return_winner() or play_game() is executed.
 
-check-for-empty PHOTO
+![picture of code checking for empty cups](https://github.com/samuelcoding97/Mancala/blob/main/mancala-photos/check-for-empty.png)
